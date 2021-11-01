@@ -6,7 +6,7 @@ using CleanArch.Domain.Models;
 
 namespace CleanArch.Application.Interfaces
 {
-    interface ICourseService
+    public interface ICourseService
     {
         CourseViewModel GetAllCourse();
         Course GetCourseById(int courseId);
