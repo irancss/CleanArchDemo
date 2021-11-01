@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CleanArch.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CleanArch.MVC.Controllers
 {
+    [Authorize]
     public class CourseController : Controller
     {
         private ICourseService _courseService;
