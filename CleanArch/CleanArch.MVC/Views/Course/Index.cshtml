@@ -1,0 +1,39 @@
+﻿@model CleanArch.Application.ViewModels.CourseViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>coruse Id</th>
+            <th>coruse Name</th>
+            <th>coruse Description</th>
+            <th>coruse Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Courses)
+        {
+            <tr>
+                <td>@item.CourseId</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>
+                    <img src="@item.ImageUrl" width="300" height="300" />
+                </td>
+                @*<td>
+                        @Html.ActionLink("Edit", "Edit", new {/* id=item.PrimaryKey */}) |
+                        @Html.ActionLink("Details", "Details", new {/* id=item.PrimaryKey */}) |
+                        @Html.ActionLink("Delete", "Delete", new {/* id=item.PrimaryKey */})
+                    </td>*@
+            </tr>
+        }
+    </tbody>
+</table>
